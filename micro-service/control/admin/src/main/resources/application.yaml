@@ -1,0 +1,10 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: @pom.artifactId@
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        root: /spring-cloud-service-node

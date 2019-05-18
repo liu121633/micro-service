@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: @pom.artifactId@
+  datasource:
+    url: jdbc:mysql://sheepdata-mysql:3306?allowMultiQueries=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true
+    username: root
+    password: root
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+security:
+  oauth2:
+    #client:
+    #  client-id: uac
+    #  client-secret: 123456
+    #  access-token-uri: http://127.0.0.1:8763/oauth/token
+    #  user-authorization-uri: http://127.0.0.1:8763/oauth/authorize
+    #  grant-type: password
+    #  scope: all
+    resource:
+      id: uac
+      jwt:
+        key-uri: http://127.0.0.1:8801/oauth/token_key

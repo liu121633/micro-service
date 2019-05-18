@@ -1,0 +1,21 @@
+server:
+  port: 8801
+spring:
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        url: http://localhost:8800
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        root: /spring-cloud-service
+management:
+  cloudfoundry:
+    skip-ssl-validation: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
